@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>This our simple .NET MVC Application </h2>
+  @TempData["Employex"]
+<p>   First Name : @ViewBag.FirstName       </p>
+<p>   Last Name : @ViewBag.LastName         </p>
+<p>   Adress : @ViewBag.Adress              </p>
+@{
+    var firstnumber = 10;
+    var secondnumber = 20;
+    var somme = firstnumber + secondnumber;
+    <p> The sum of two number @somme</p>
+}
+
+@{
+    var _number1 = 50;
+    var _number2 = 60;
+
+    if (firstnumber > secondnumber)
+    {
+        <p> First number is greater ten second number</p>
+    }
+    else
+    {
+        <text> Second  number is greater ten First number</text>
+    }
+}
+
+@for (int i = 1; i < 10; i++)
+{
+
+    <p> 2 x @i = @(2 * i)  </p>
+}

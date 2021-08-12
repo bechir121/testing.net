@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "GetEmployee";
+}
+
+<h2>Employee Details </h2>
+
+<table class="table table-bordered table-hover">
+    <tr class="btn-primary">
+        <th> EmployeeID</th>
+        <th> Employee Name</th>
+        <th> Adress </th>
+        <th>  Date of Joining </th>
+        <th>  Martial Statuts </th>
+        <th>  Is Eligible For Loan </th>
+        <th>  Salary </th>
+        <th>  Created By</th>
+        <th>  Action </th>
+    </tr>
+
+    @foreach (var employee in ViewBag.Employee)
+    {
+        <tr>
+            <td> @employee.EmployeeId</td>
+            <td> @employee.EmployeeName</td>
+            <td> @employee.Address</td>
+            <td> @employee.DateOfJoining</td>
+            <td>
+                @if (employee.MartialStatuts == 1)
+                {
+                    <p> Married</p>
+                }
+                else
+                {
+                    <p> Single </p>
+                }
+
+            </td>
+            <td> @employee.IsEligebleForLoad</td>
+            <td> @employee.Salary</td>
+            <td> @employee.CreatedBy</td>
+           
+
+            <td>
+                <button type="button" class="btn btn-primary">  Edit </button>
+                <button type="button" class="btn btn-danger">  Delete </button>
+            </td>
+        </tr>
+    }
+
+</table>

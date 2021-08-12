@@ -1,0 +1,31 @@
+﻿@model WebApplication2.ViewModels.StudentViewModel
+
+
+
+@{
+    ViewBag.Title = "GetStudent";
+}
+
+<h2>List of Student and subjects </h2>
+
+<h4>List of Student</h4>
+
+    @foreach (var student in Model.Student)
+    {
+        <li>
+            @student.Name;
+         </li>
+
+    }
+
+
+<h4>List of Customers</h4>
+<ul>
+    @foreach (var subjects in Model.Subjects)
+    {
+        <li>
+            @subjects.Name;
+        </li>
+
+    }
+</ul>
